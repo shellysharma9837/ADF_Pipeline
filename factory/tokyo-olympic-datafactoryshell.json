@@ -1,0 +1,9 @@
+{
+	"name": "tokyo-olympic-datafactoryshell",
+	"location": "ukwest",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "36e966dc-81d9-4e12-a4db-adc28123612e",
+		"tenantId": "a9518263-24c6-41d6-af92-47517d99aed1"
+	}
+}
