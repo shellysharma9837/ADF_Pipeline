@@ -18,7 +18,7 @@
 						"referenceName": "dataflow_sink",
 						"type": "DatasetReference"
 					},
-					"name": "dataflow_sink"
+					"name": "dataflowsink"
 				}
 			],
 			"transformations": [
@@ -29,7 +29,10 @@
 					"name": "aggregate"
 				},
 				{
-					"name": "filter1"
+					"name": "filter"
+				},
+				{
+					"name": "alterRows"
 				}
 			],
 			"scriptLines": [
@@ -50,14 +53,15 @@
 				"     skipDuplicateMapOutputs: true) ~> select",
 				"select aggregate(groupBy(Discipline),",
 				"     NOC = count(NOC)) ~> aggregate",
-				"aggregate filter(Discipline == 'Basketball') ~> filter1",
-				"filter1 sink(allowSchemaDrift: true,",
+				"aggregate filter(Discipline == 'Basketball') ~> filter",
+				"filter alterRow(insertIf(1==1)) ~> alterRows",
+				"alterRows sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     umask: 0022,",
 				"     preCommands: [],",
 				"     postCommands: [],",
 				"     skipDuplicateMapInputs: true,",
-				"     skipDuplicateMapOutputs: true) ~> dataflow_sink"
+				"     skipDuplicateMapOutputs: true) ~> dataflowsink"
 			]
 		}
 	}
