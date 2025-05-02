@@ -216,7 +216,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataflow": {
-						"referenceName": "dataflow_source",
+						"referenceName": "TransformCSV",
 						"type": "DataFlowReference"
 					},
 					"compute": {
