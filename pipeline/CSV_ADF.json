@@ -232,22 +232,6 @@
 					},
 					"traceLevel": "Fine"
 				}
-			},
-			{
-				"name": "ForEach2",
-				"type": "ForEach",
-				"dependsOn": [],
-				"userProperties": [],
-				"typeProperties": {
-					"activities": [
-						{
-							"name": "If Condition1",
-							"type": "IfCondition",
-							"dependsOn": [],
-							"userProperties": []
-						}
-					]
-				}
 			}
 		],
 		"annotations": [],
