@@ -125,6 +125,14 @@
 									"value": "@equals(item().name, concat('athletes_', formatDateTime(utcNow(), 'yyyy-MM-dd'), '.csv'))\n",
 									"type": "Expression"
 								},
+								"ifFalseActivities": [
+									{
+										"name": "Fail1",
+										"type": "Fail",
+										"dependsOn": [],
+										"userProperties": []
+									}
+								],
 								"ifTrueActivities": [
 									{
 										"name": "CopyLatestData",
