@@ -1,0 +1,41 @@
+{
+	"name": "DelimitedText1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "teams.csv",
+				"folderPath": "raw data",
+				"container": "tokyo-olympic-data"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Name",
+				"type": "String"
+			},
+			{
+				"name": "Discipline",
+				"type": "String"
+			},
+			{
+				"name": "NOC",
+				"type": "String"
+			},
+			{
+				"name": "Event",
+				"type": "String"
+			}
+		]
+	}
+}
