@@ -10,13 +10,6 @@
 						"type": "DatasetReference"
 					},
 					"name": "Sourcecsv"
-				},
-				{
-					"dataset": {
-						"referenceName": "Athletes",
-						"type": "DatasetReference"
-					},
-					"name": "source1"
 				}
 			],
 			"sinks": [
@@ -40,9 +33,6 @@
 				},
 				{
 					"name": "alterRows"
-				},
-				{
-					"name": "select1"
 				}
 			],
 			"scriptLines": [
@@ -54,9 +44,6 @@
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false) ~> Sourcecsv",
-				"source(allowSchemaDrift: true,",
-				"     validateSchema: false,",
-				"     ignoreNoFilesFound: false) ~> source1",
 				"Sourcecsv select(mapColumn(",
 				"          Name,",
 				"          NOC,",
@@ -68,9 +55,6 @@
 				"     NOC = count(NOC)) ~> aggregate",
 				"aggregate filter(Discipline == 'Basketball') ~> filter",
 				"filter alterRow(insertIf(1==1)) ~> alterRows",
-				"source1 select(partitionBy('hash', 1),",
-				"     skipDuplicateMapInputs: true,",
-				"     skipDuplicateMapOutputs: true) ~> select1",
 				"alterRows sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     umask: 0022,",
