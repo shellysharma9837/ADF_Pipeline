@@ -1,0 +1,9 @@
+{
+	"name": "practicenishantshelly",
+	"location": "uksouth",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "e8f40244-a3ac-4931-917b-47b812956640",
+		"tenantId": "e02dc987-970b-4951-865e-7d026cd480ea"
+	}
+}
