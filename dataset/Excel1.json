@@ -13,10 +13,7 @@
 				"fileName": "leads.csv",
 				"container": "practice"
 			},
-			"firstRowAsHeader": true,
-			"compression": {
-				"type": "bzip2"
-			}
+			"firstRowAsHeader": true
 		},
 		"schema": []
 	}
