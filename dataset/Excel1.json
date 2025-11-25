@@ -1,0 +1,23 @@
+{
+	"name": "Excel1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Excel",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "leads.csv",
+				"container": "practice"
+			},
+			"firstRowAsHeader": true,
+			"compression": {
+				"type": "bzip2"
+			}
+		},
+		"schema": []
+	}
+}
