@@ -36,7 +36,16 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
-				"userProperties": [],
+				"userProperties": [
+					{
+						"name": "Source",
+						"value": "/pub/"
+					},
+					{
+						"name": "Destination",
+						"value": "practice/pipeline1_file/"
+					}
+				],
 				"typeProperties": {
 					"source": {
 						"type": "BinarySource",
