@@ -11,10 +11,6 @@
 			"location": {
 				"type": "SftpLocation",
 				"folderPath": "/pub"
-			},
-			"compression": {
-				"type": "gzip",
-				"level": "Fastest"
 			}
 		}
 	}
