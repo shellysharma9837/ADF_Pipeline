@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "leads.csv",
+				"folderPath": "csv",
 				"container": "practice"
 			},
 			"firstRowAsHeader": true
