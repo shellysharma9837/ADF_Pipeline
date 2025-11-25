@@ -50,9 +50,14 @@
 						}
 					},
 					"sink": {
-						"type": "BinarySink",
+						"type": "DelimitedTextSink",
 						"storeSettings": {
 							"type": "AzureBlobStorageWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
 						}
 					},
 					"enableStaging": false
@@ -65,7 +70,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "DestinationDataset_wcu",
+						"referenceName": "DelimitedText1",
 						"type": "DatasetReference"
 					}
 				]
